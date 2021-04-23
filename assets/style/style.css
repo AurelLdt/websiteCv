@@ -1,0 +1,377 @@
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: rgba(241, 242, 246, 0.9);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html body .container .header {
+  width: 99vw;
+  min-height: 100vh;
+  background-color: rgba(241, 242, 246, 0.9);
+  background-image: url(../image/20201120_131450-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  margin: auto;
+  padding: 0;
+}
+html body .container .header #navBar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  background-color: rgba(241, 242, 246, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 1330px) {
+  html body .container .header #navBar {
+    display: flex;
+    justify-content: center;
+  }
+}
+html body .container .header #navBar a {
+  text-decoration: none;
+}
+html body .container .header #navBar a h1 {
+  max-width: 500px;
+  min-width: 400px;
+  font-family: "Poiret One", cursive;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  color: #2d3436;
+  margin: 0;
+}
+html body .container .header #navBar a h1 span {
+  color: #eda548;
+}
+html body .container .header #navBar ul {
+  width: auto;
+  max-width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 150px;
+  margin: 0;
+}
+html body .container .header #navBar ul a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Poiret One", cursive;
+  color: #2d3436;
+}
+html body .container .header #navBar ul a:hover {
+  color: #eda548;
+}
+html body .container .header #navBar ul a li {
+  list-style: none;
+  padding: 0 30px 0 30px;
+  font-family: "Poiret One", cursive;
+}
+html body .container .header .Entete {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  margin: auto 0;
+  padding: 0;
+}
+html body .container .header .Entete .text {
+  width: 70%;
+  height: auto;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 auto;
+  color: #2d3436;
+}
+html body .container .header .Entete .text p {
+  padding: 10px 0 10px 0;
+  margin: 0 0 20px 0;
+}
+html body .container .header .Entete .text a {
+  text-decoration: none;
+  font-family: "Poiret One", cursive;
+  font-size: 30px;
+  background-color: #2d3436;
+  color: #ffffff;
+  padding: 15px;
+}
+html body .container .header .Entete .text a:hover {
+  background-color: #eda548;
+}
+html body .container .header .Entete .imgReseau {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  position: fixed;
+  top: 40%;
+  left: 20px;
+}
+html body .container .header .Entete .imgReseau a {
+  width: 30px;
+  margin: 10px 0 10px 0;
+}
+html body .container .header .Entete .imgReseau a img {
+  width: 30px;
+  margin: 10px 0 10px 0;
+  transition: 1s;
+  -ms-transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+html body .container .header .Entete .imgReseau a img:hover {
+  width: 40px;
+  transition: 0.5s;
+  -ms-transform: rotate(360deg);
+  /* IE 9 */
+  -webkit-transform: rotate(360deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(360deg);
+}
+html body .container .header #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: #eda548;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+html body .container .header #myBtn:hover {
+  background-color: #eda548;
+  color: #2d3436;
+  transition: 0.5s;
+}
+html body .container .body1 {
+  width: 99vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+html body .container .body1 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 35px;
+}
+html body .container .body1 h3:hover {
+  color: #eda548;
+}
+html body .container .body1 p {
+  width: 500px;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  text-align: justify;
+}
+html body .container .body2 {
+  width: 100%;
+  height: 99vh;
+}
+html body .container .body3 {
+  width: 99vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+html body .container .body3 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 35px;
+}
+html body .container .body3 h3:hover {
+  color: #eda548;
+}
+html body .container .body3 .imageResau {
+  width: 90vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+html body .container .body3 .imageResau .image1,
+html body .container .body3 .imageResau .image2,
+html body .container .body3 .imageResau .image3,
+html body .container .body3 .imageResau .image4,
+html body .container .body3 .imageResau .image5,
+html body .container .body3 .imageResau .image6,
+html body .container .body3 .imageResau .image7,
+html body .container .body3 .imageResau .image8,
+html body .container .body3 .imageResau .image9 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(241, 242, 246, 0.9);
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  margin: 10px 10px 10px 10px;
+  padding: 0;
+}
+html body .container .body3 .imageResau .image1 img,
+html body .container .body3 .imageResau .image2 img,
+html body .container .body3 .imageResau .image3 img,
+html body .container .body3 .imageResau .image4 img,
+html body .container .body3 .imageResau .image5 img,
+html body .container .body3 .imageResau .image6 img,
+html body .container .body3 .imageResau .image7 img,
+html body .container .body3 .imageResau .image8 img,
+html body .container .body3 .imageResau .image9 img {
+  transition: 1s;
+  width: 150px;
+}
+html body .container .body3 .imageResau .image1 img:hover,
+html body .container .body3 .imageResau .image2 img:hover,
+html body .container .body3 .imageResau .image3 img:hover,
+html body .container .body3 .imageResau .image4 img:hover,
+html body .container .body3 .imageResau .image5 img:hover,
+html body .container .body3 .imageResau .image6 img:hover,
+html body .container .body3 .imageResau .image7 img:hover,
+html body .container .body3 .imageResau .image8 img:hover,
+html body .container .body3 .imageResau .image9 img:hover {
+  transform: translateZ(100px);
+  transition: 1s;
+}
+html body .container .body3 .imageResau .image1 p,
+html body .container .body3 .imageResau .image2 p,
+html body .container .body3 .imageResau .image3 p,
+html body .container .body3 .imageResau .image4 p,
+html body .container .body3 .imageResau .image5 p,
+html body .container .body3 .imageResau .image6 p,
+html body .container .body3 .imageResau .image7 p,
+html body .container .body3 .imageResau .image8 p,
+html body .container .body3 .imageResau .image9 p {
+  transition: 1s;
+  margin: 0;
+  font-size: 25px;
+  color: #eda548;
+}
+html body .container .body3 .imageResau .image1 p:hover,
+html body .container .body3 .imageResau .image2 p:hover,
+html body .container .body3 .imageResau .image3 p:hover,
+html body .container .body3 .imageResau .image4 p:hover,
+html body .container .body3 .imageResau .image5 p:hover,
+html body .container .body3 .imageResau .image6 p:hover,
+html body .container .body3 .imageResau .image7 p:hover,
+html body .container .body3 .imageResau .image8 p:hover,
+html body .container .body3 .imageResau .image9 p:hover {
+  transform: translateZ(15px);
+  transition: 1s;
+}
+html body .container .body4 {
+  width: 99vw;
+  height: 99vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+html body .container .body4 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 35px;
+}
+html body .container .body4 iframe {
+  width: 30%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+html body .container .body4 .card {
+  width: 690px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(241, 242, 246, 0.9);
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px #2d3436;
+  transform-style: preserve-3d;
+  margin: 10px 10px 10px 10px;
+  padding: 0;
+}
+html body .container .body4 .text {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+html body .container .body4 .text:hover {
+  transform: translateZ(40px);
+  transition: 1s;
+}
+html body .container .body4 .text p {
+  margin: 0;
+  padding: 10px 0 0 15px;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  font-weight: bold;
+}
+html body .container .body4 .text p a {
+  color: #2d3436;
+  text-decoration: none;
+  transition: 0.5s;
+}
+html body .container .body4 .text p a:hover {
+  color: #eda548;
+  transition: 0.5s;
+}
+html body .container .body4 img {
+  border-radius: 0 0 20px 0;
+  transition: 1s;
+  width: 189px;
+}
+html body .container .body4 img:hover {
+  transform: translateZ(100px);
+  transition: 1s;
+}
+
+/*# sourceMappingURL=style.css.map */
