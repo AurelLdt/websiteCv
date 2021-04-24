@@ -17,6 +17,7 @@ html body .container .header {
   background-position: bottom right;
   margin: auto;
   padding: 0;
+  position: relative;
 }
 html body .container .header #navBar {
   width: 100%;
@@ -31,10 +32,9 @@ html body .container .header #navBar {
   top: 0;
   z-index: 1;
 }
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1150px) {
   html body .container .header #navBar {
-    display: flex;
-    justify-content: center;
+    height: 110px;
   }
 }
 html body .container .header #navBar a {
@@ -53,15 +53,33 @@ html body .container .header #navBar a h1 {
 html body .container .header #navBar a h1 span {
   color: #eda548;
 }
+@media screen and (max-width: 1150px) {
+  html body .container .header #navBar a h1 {
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 html body .container .header #navBar ul {
-  width: auto;
-  max-width: 99%;
+  width: 50%;
+  min-width: 70%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0;
   margin-right: 150px;
   margin: 0;
+}
+@media screen and (max-width: 1150px) {
+  html body .container .header #navBar ul {
+    min-width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
 }
 html body .container .header #navBar ul a {
   text-decoration: none;
@@ -69,10 +87,18 @@ html body .container .header #navBar ul a {
   font-family: "Poiret One", cursive;
   color: #2d3436;
 }
+@media screen and (max-width: 1150px) {
+  html body .container .header #navBar ul a {
+    font-size: 15px;
+  }
+}
 html body .container .header #navBar ul a:hover {
   color: #eda548;
 }
 html body .container .header #navBar ul a li {
+  min-width: 80px;
+  display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0 30px 0 30px;
   font-family: "Poiret One", cursive;
@@ -81,18 +107,20 @@ html body .container .header .Entete {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 30%;
+  top: 50%;
   margin: auto 0;
   padding: 0;
 }
 html body .container .header .Entete .text {
-  width: 70%;
+  width: 60%;
   height: auto;
   font-family: "Poiret One", cursive;
   font-weight: bold;
   font-size: 20px;
   margin: 0 auto;
   color: #2d3436;
+  position: absolute;
+  left: 10%;
 }
 html body .container .header .Entete .text p {
   padding: 10px 0 10px 0;
@@ -105,44 +133,17 @@ html body .container .header .Entete .text a {
   background-color: #2d3436;
   color: #ffffff;
   padding: 15px;
+  transition: 0.5s;
 }
 html body .container .header .Entete .text a:hover {
   background-color: #eda548;
-}
-html body .container .header .Entete .imgReseau {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-  position: fixed;
-  top: 40%;
-  left: 20px;
-}
-html body .container .header .Entete .imgReseau a {
-  width: 30px;
-  margin: 10px 0 10px 0;
-}
-html body .container .header .Entete .imgReseau a img {
-  width: 30px;
-  margin: 10px 0 10px 0;
-  transition: 1s;
-  -ms-transition: 1s ease-in-out;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-}
-html body .container .header .Entete .imgReseau a img:hover {
-  width: 40px;
+  color: #2d3436;
   transition: 0.5s;
-  -ms-transform: rotate(360deg);
-  /* IE 9 */
-  -webkit-transform: rotate(360deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(360deg);
 }
 html body .container .header #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   z-index: 99;
   font-size: 25px;
@@ -170,6 +171,7 @@ html body .container .body1 {
   flex-wrap: wrap;
 }
 html body .container .body1 h3 {
+  width: 99vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +179,7 @@ html body .container .body1 h3 {
   font-family: "Poiret One", cursive;
   font-weight: bold;
   font-size: 35px;
+  flex-wrap: wrap;
 }
 html body .container .body1 h3:hover {
   color: #eda548;
@@ -185,21 +188,20 @@ html body .container .body1 p {
   width: 500px;
   font-family: "Poiret One", cursive;
   font-size: 25px;
-  text-align: justify;
+  text-align: center;
 }
 html body .container .body2 {
-  width: 100%;
-  height: 99vh;
-}
-html body .container .body3 {
   width: 99vw;
   height: 100vh;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
 }
-html body .container .body3 h3 {
+html body .container .body2 h3 {
+  width: 99vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,6 +209,31 @@ html body .container .body3 h3 {
   font-family: "Poiret One", cursive;
   font-weight: bold;
   font-size: 35px;
+  flex-wrap: wrap;
+}
+html body .container .body2 h3:hover {
+  color: #eda548;
+}
+html body .container .body3 {
+  width: 99vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+html body .container .body3 h3 {
+  width: 99vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 35px;
+  flex-wrap: wrap;
 }
 html body .container .body3 h3:hover {
   color: #eda548;
@@ -294,31 +321,27 @@ html body .container .body3 .imageResau .image9 p:hover {
 }
 html body .container .body4 {
   width: 99vw;
-  height: 99vh;
+  height: 100vh;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 html body .container .body4 h3 {
+  width: 99vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   width: 100%;
   font-family: "Poiret One", cursive;
   font-weight: bold;
   font-size: 35px;
+  flex-wrap: wrap;
 }
-html body .container .body4 iframe {
-  width: 30%;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+html body .container .body4 h3:hover {
+  color: #eda548;
 }
 html body .container .body4 .card {
   width: 690px;
@@ -331,14 +354,33 @@ html body .container .body4 .card {
   background-color: rgba(241, 242, 246, 0.9);
   border-radius: 20px;
   box-shadow: 1px 1px 4px #2d3436;
-  transform-style: preserve-3d;
   margin: 10px 10px 10px 10px;
   padding: 0;
+  transform-style: preserve-3d;
+}
+html body .container .body4 .imgReseau {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+}
+html body .container .body4 .imgReseau a {
+  width: 30px;
+  margin: 10px 0 10px 0;
+  padding: 0 10px 0 10px;
+}
+html body .container .body4 .imgReseau a img {
+  width: 30px;
+  margin: 10px 0 10px 0;
+  border-radius: unset;
 }
 html body .container .body4 .text {
   width: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   transform-style: preserve-3d;
@@ -372,6 +414,29 @@ html body .container .body4 img {
 html body .container .body4 img:hover {
   transform: translateZ(100px);
   transition: 1s;
+  opacity: 0.7;
+}
+html body .container .body4 footer {
+  width: 99vw;
+  height: 50px;
+  background-color: #2d3436;
+  position: absolute;
+  bottom: -400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .container .body4 footer p {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(241, 242, 246, 0.9);
+  font-family: "Poiret One", cursive;
+}
+html body .container .body4 footer a {
+  color: #eda548;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

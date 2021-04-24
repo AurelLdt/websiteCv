@@ -100,7 +100,7 @@ window.onscroll = function () {
     document.getElementById('ul').style.top = '55%';
     document.getElementById('ul').style.right = '0';
     document.getElementById('ul').style.transition = 'all 1s';
-    document.getElementById('navBar').style.backgroundColor = 'rgba(241, 242, 246, 0.4)';
+    document.getElementById('navBar').style.backgroundColor = 'rgba(241, 242, 246, 0.9)';
   }
   prevScrollpos = currentScrollPos;
 };

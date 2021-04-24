@@ -26,6 +26,7 @@ html {
                 background-position: bottom right;
                 margin             : auto;
                 padding            : 0;
+                position           : relative;
 
                 #navBar {
                     width           : 100%;
@@ -40,9 +41,8 @@ html {
                     top             : 0;
                     z-index         : 1;
 
-                    @media screen and (max-width: 1330px) {
-                        display        : flex;
-                        justify-content: center;
+                    @media screen and (max-width: 1150px) {
+                        height: 110px;
                     }
 
                     a {
@@ -61,18 +61,34 @@ html {
                             span {
                                 color: $color1;
                             }
+
+                            @media screen and (max-width: 1150px) {
+                                min-width      : 100vw;
+                                display        : flex;
+                                justify-content: center;
+                                align-items    : center;
+                            }
                         }
                     }
 
                     ul {
-                        width          : auto;
-                        max-width      : 99%;
+                        width          : 50%;
+                        min-width      : 70%;
                         display        : flex;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items    : center;
+                        flex-wrap      : wrap;
                         padding        : 0;
                         margin-right   : 150px;
                         margin         : 0;
+
+                        @media screen and (max-width: 1150px) {
+                            min-width      : 100vw;
+                            height         : 50px;
+                            display        : flex;
+                            justify-content: center;
+                            align-items    : flex-end;
+                        }
 
                         a {
                             text-decoration: none;
@@ -80,14 +96,21 @@ html {
                             font-family    : $font1;
                             color          : $color2;
 
+                            @media screen and (max-width: 1150px) {
+                                font-size: 15px;
+                            }
+
                             &:hover {
                                 color: $color1;
                             }
 
                             li {
-                                list-style : none;
-                                padding    : 0 30px 0 30px;
-                                font-family: $font1;
+                                min-width      : 80px;
+                                display        : flex;
+                                justify-content: center;
+                                list-style     : none;
+                                padding        : 0 30px 0 30px;
+                                font-family    : $font1;
                             }
                         }
                     }
@@ -97,24 +120,28 @@ html {
                     width   : 100%;
                     height  : auto;
                     position: absolute;
-                    top     : 30%;
+                    top     : 50%;
                     margin  : auto 0;
                     padding : 0;
 
                     .text {
-                        width      : 70%;
+                        width      : 60%;
                         height     : auto;
                         font-family: $font1;
                         font-weight: bold;
                         font-size  : 20px;
                         margin     : 0 auto;
                         color      : $color2;
+                        position   : absolute;
+                        left       : 10%;
+
 
                         p {
                             padding: 10px 0 10px 0;
                             margin : 0 0 20px 0;
                         }
 
+                        // Boutton "Télécahrger mon CV"
                         a {
                             text-decoration : none;
                             font-family     : $font1;
@@ -122,53 +149,24 @@ html {
                             background-color: $color2;
                             color           : $color4;
                             padding         : 15px;
+                            transition      : 0.5s;
 
                             &:hover {
                                 background-color: $color1;
+                                color           : $color2;
+                                transition      : 0.5s;
                             }
                         }
                     }
 
-                    .imgReseau {
-                        height        : 300px;
-                        display       : flex;
-                        flex-direction: column;
-                        width         : 100px;
-                        position      : fixed;
-                        top           : 40%;
-                        left          : 20px;
 
-                        a {
-                            width : 30px;
-                            margin: 10px 0 10px 0;
-
-                            img {
-                                width             : 30px;
-                                margin            : 10px 0 10px 0;
-                                transition        : 1s;
-                                -ms-transition    : 1s ease-in-out;
-                                -webkit-transition: 1s ease-in-out;
-                                transition        : 1s ease-in-out;
-
-                                &:hover {
-                                    width            : 40px;
-                                    transition       : 0.5s;
-                                    -ms-transform    : rotate(360deg);
-                                    /* IE 9 */
-                                    -webkit-transform: rotate(360deg);
-                                    /* Chrome, Safari, Opera */
-                                    transform        : rotate(360deg);
-                                }
-
-                            }
-                        }
-                    }
                 }
 
+                // Boutton retour Top
                 #myBtn {
                     display      : none;
                     position     : fixed;
-                    bottom       : 20px;
+                    bottom       : 30px;
                     right        : 20px;
                     z-index      : 99;
                     font-size    : 25px;
@@ -200,6 +198,7 @@ html {
 
 
                 h3 {
+                    width          : 99vw;
                     display        : flex;
                     justify-content: center;
                     align-items    : center;
@@ -207,6 +206,7 @@ html {
                     font-family    : $font1;
                     font-weight    : bold;
                     font-size      : 35px;
+                    flex-wrap      : wrap;
 
                     &:hover {
                         color: $color1;
@@ -217,13 +217,35 @@ html {
                     width      : 500px;
                     font-family: $font1;
                     font-size  : 25px;
-                    text-align : justify;
+                    text-align : center;
                 }
             }
 
             .body2 {
-                width : 100%;
-                height: 99vh;
+                width           : 99vw;
+                height          : 100vh;
+                background-color: #ffffff;
+                display         : flex;
+                justify-content : center;
+                align-items     : center;
+                flex-direction  : column;
+                flex-wrap       : wrap;
+
+                h3 {
+                    width          : 99vw;
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
+                    width          : 100%;
+                    font-family    : $font1;
+                    font-weight    : bold;
+                    font-size      : 35px;
+                    flex-wrap      : wrap;
+
+                    &:hover {
+                        color: $color1;
+                    }
+                }
             }
 
             .body3 {
@@ -232,9 +254,12 @@ html {
                 background-color: #ffffff;
                 display         : flex;
                 justify-content : center;
+                align-items     : center;
+                flex-direction  : column;
                 flex-wrap       : wrap;
 
                 h3 {
+                    width          : 99vw;
                     display        : flex;
                     justify-content: center;
                     align-items    : center;
@@ -242,6 +267,7 @@ html {
                     font-family    : $font1;
                     font-weight    : bold;
                     font-size      : 35px;
+                    flex-wrap      : wrap;
 
                     &:hover {
                         color: $color1;
@@ -306,34 +332,31 @@ html {
 
             .body4 {
                 width           : 99vw;
-                height          : 99vh;
+                height          : 100vh;
                 background-color: #ffffff;
                 display         : flex;
                 justify-content : center;
                 align-items     : center;
-                flex-direction  : row;
+                flex-direction  : column;
                 flex-wrap       : wrap;
 
                 h3 {
+                    width          : 99vw;
                     display        : flex;
                     justify-content: center;
                     align-items    : center;
-                    margin         : auto;
                     width          : 100%;
                     font-family    : $font1;
                     font-weight    : bold;
                     font-size      : 35px;
+                    flex-wrap      : wrap;
+
+                    &:hover {
+                        color: $color1;
+                    }
                 }
 
-                iframe {
-                    width          : 30%;
-                    height         : 40vh;
-                    display        : flex;
-                    justify-content: center;
-                    align-items    : center;
-                    position       : relative;
-                }
-
+                // Card 3D
                 .card {
                     width           : 690px;
                     height          : 400px;
@@ -345,15 +368,38 @@ html {
                     background-color: $color3;
                     border-radius   : 20px;
                     box-shadow      : 1px 1px 4px $color2;
-                    transform-style : preserve-3d;
                     margin          : 10px 10px 10px 10px;
                     padding         : 0;
+                    transform-style : preserve-3d;
+                }
+
+                //image réseau FB, Slack, Twitter
+                .imgReseau {
+                    width         : auto;
+                    height        : auto;
+                    display       : flex;
+                    flex-direction: row;
+                    position      : absolute;
+                    top           : 140%;
+                    left          : 50%;
+
+                    a {
+                        width  : 30px;
+                        margin : 10px 0 10px 0;
+                        padding: 0 10px 0 10px;
+
+                        img {
+                            width        : 30px;
+                            margin       : 10px 0 10px 0;
+                            border-radius: unset;
+                        }
+                    }
                 }
 
                 .text {
                     width          : 500px;
                     display        : flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items    : center;
                     flex-direction : column;
                     transform-style: preserve-3d;
@@ -392,9 +438,36 @@ html {
                     &:hover {
                         transform : translateZ(100px);
                         transition: 1s;
+                        opacity   : 0.7;
                     }
                 }
 
+                footer {
+                    width           : 99vw;
+                    height          : 50px;
+                    background-color: $color2;
+                    position        : absolute;
+                    bottom          : -400%;
+                    display         : flex;
+                    justify-content : center;
+                    align-items     : center;
+
+                    p {
+                        width          : auto;
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+                        color          : $color3;
+                        font-family    : $font1;
+
+                    }
+
+                    a {
+                        color          : $color1;
+                        text-decoration: none;
+                    }
+
+                }
 
             }
         }
