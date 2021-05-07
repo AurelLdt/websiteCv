@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 html body {
-  background-color: rgba(241, 242, 246, 0.9);
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -75,7 +75,7 @@ html body .container .header #navBar ul {
 @media screen and (max-width: 1150px) {
   html body .container .header #navBar ul {
     min-width: 100vw;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -84,6 +84,7 @@ html body .container .header #navBar ul {
 html body .container .header #navBar ul a {
   text-decoration: none;
   font-size: 20px;
+  font-weight: bold;
   font-family: "Poiret One", cursive;
   color: #2d3436;
 }
@@ -185,10 +186,17 @@ html body .container .body1 h3:hover {
   color: #eda548;
 }
 html body .container .body1 p {
-  width: 500px;
+  width: 700px;
   font-family: "Poiret One", cursive;
   font-size: 25px;
   text-align: center;
+}
+html body .container .body1 #canvas {
+  width: 20vw;
+  border: 1px solid black;
+  position: absolute;
+  left: 40vw;
+  top: 105vh;
 }
 html body .container .body2 {
   width: 99vw;
@@ -214,6 +222,15 @@ html body .container .body2 h3 {
 html body .container .body2 h3:hover {
   color: #eda548;
 }
+html body .container .body2 p {
+  width: 30%;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+}
+html body .container .body2 img {
+  width: 50vw;
+  border: 1px solid black;
+}
 html body .container .body3 {
   width: 99vw;
   height: 100vh;
@@ -237,6 +254,11 @@ html body .container .body3 h3 {
 }
 html body .container .body3 h3:hover {
   color: #eda548;
+}
+html body .container .body3 p {
+  width: 30%;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
 }
 html body .container .body3 .imageResau {
   width: 90vw;
@@ -321,7 +343,7 @@ html body .container .body3 .imageResau .image9 p:hover {
 }
 html body .container .body4 {
   width: 99vw;
-  height: 100vh;
+  height: 90vh;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -418,10 +440,10 @@ html body .container .body4 img:hover {
 }
 html body .container .body4 footer {
   width: 99vw;
-  height: 50px;
+  height: 5vh;
   background-color: #2d3436;
   position: absolute;
-  bottom: -400%;
+  bottom: -400vh;
   display: flex;
   justify-content: center;
   align-items: center;

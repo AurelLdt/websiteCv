@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 
     body {
-        background-color: $color3;
+        background-color: $color4;
         margin          : 0;
         padding         : 0;
         box-sizing      : border-box;
@@ -84,7 +84,7 @@ html {
 
                         @media screen and (max-width: 1150px) {
                             min-width      : 100vw;
-                            height         : 50px;
+                            height         : 40px;
                             display        : flex;
                             justify-content: center;
                             align-items    : flex-end;
@@ -93,6 +93,7 @@ html {
                         a {
                             text-decoration: none;
                             font-size      : 20px;
+                            font-weight    : bold;
                             font-family    : $font1;
                             color          : $color2;
 
@@ -214,10 +215,18 @@ html {
                 }
 
                 p {
-                    width      : 500px;
+                    width      : 700px;
                     font-family: $font1;
                     font-size  : 25px;
                     text-align : center;
+                }
+
+                #canvas {
+                    width   : 20vw;
+                    border  : 1px solid black;
+                    position: absolute;
+                    left    : 40vw;
+                    top     : 105vh;
                 }
             }
 
@@ -246,6 +255,17 @@ html {
                         color: $color1;
                     }
                 }
+
+                p {
+                    width      : 30%;
+                    font-family: $font1;
+                    font-weight: bold;
+                }
+
+                img {
+                    width : 50vw;
+                    border: 1px solid black;
+                }
             }
 
             .body3 {
@@ -272,6 +292,12 @@ html {
                     &:hover {
                         color: $color1;
                     }
+                }
+
+                p {
+                    width      : 30%;
+                    font-family: $font1;
+                    font-weight: bold;
                 }
 
                 .imageResau {
@@ -332,7 +358,7 @@ html {
 
             .body4 {
                 width           : 99vw;
-                height          : 100vh;
+                height          : 90vh;
                 background-color: #ffffff;
                 display         : flex;
                 justify-content : center;
@@ -444,10 +470,10 @@ html {
 
                 footer {
                     width           : 99vw;
-                    height          : 50px;
+                    height          : 5vh;
                     background-color: $color2;
                     position        : absolute;
-                    bottom          : -400%;
+                    bottom          : -400vh;
                     display         : flex;
                     justify-content : center;
                     align-items     : center;

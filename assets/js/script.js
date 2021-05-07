@@ -7,7 +7,6 @@ var typed = new Typed('.typing', {
   loop: true,
 });
 
-
 // 3D animation
 
 VanillaTilt.init(document.querySelector('.image1'), {
@@ -47,14 +46,12 @@ VanillaTilt.init(document.querySelector('.image9'), {
   speed: 2500,
 });
 
-
 // 3D animation Card
 
 VanillaTilt.init(document.querySelector('.card'), {
   max: 10,
   speed: 500,
 });
-
 
 //Script Button To Top
 
@@ -71,7 +68,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
 //Script Hide navBar
 
 var prevScrollpos = window.pageYOffset;
@@ -87,7 +83,8 @@ window.onscroll = function () {
     document.getElementById('ul').style.position = 'absolute';
     document.getElementById('ul').style.top = '40%';
     document.getElementById('ul').style.right = '0';
-    document.getElementById('navBar').style.backgroundColor = 'rgba(241, 242, 246, 1.0)';
+    document.getElementById('navBar').style.backgroundColor =
+      'rgba(241, 242, 246, 1.0)';
   } else {
     document.getElementById('navBar').style.top = '-30px';
     document.getElementById('navBar').style.transition = 'all 1s';
@@ -100,7 +97,54 @@ window.onscroll = function () {
     document.getElementById('ul').style.top = '55%';
     document.getElementById('ul').style.right = '0';
     document.getElementById('ul').style.transition = 'all 1s';
-    document.getElementById('navBar').style.backgroundColor = 'rgba(241, 242, 246, 0.9)';
+    document.getElementById('navBar').style.backgroundColor =
+      'rgba(241, 242, 246, 0.9)';
   }
   prevScrollpos = currentScrollPos;
 };
+
+// Animation balle rebondissante
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var raf;
+
+var ball = {
+  x: 100,
+  y: 100,
+  vx: 5,
+  vy: 2,
+  radius: 25,
+  color: '#eda548',
+  draw: function () {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  },
+};
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ball.draw();
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+  raf = window.requestAnimationFrame(draw);
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+    ball.vy = -ball.vy;
+  }
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+    ball.vx = -ball.vx;
+  }
+}
+
+canvas.addEventListener('mouseover', function (e) {
+  raf = window.requestAnimationFrame(draw);
+});
+
+canvas.addEventListener('mouseout', function (e) {
+  window.cancelAnimationFrame(raf);
+});
+
+ball.draw();
